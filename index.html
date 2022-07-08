@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Anushtha Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* CSS Reset */
+    
+    body {
+        font-family: 'Baloo Bhai', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('https://media.istockphoto.com/photos/athlete-made-stretching-picture-id629605358?k=20&m=629605358&s=612x612&w=0&h=vgSQT3s5rGHitQmFXhiKhj8hNfB9j4KeIg0NEz65EfU=');
+    }
+    
+    .left {
+        display: inline-block;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+    }
+    
+    .left img {
+        width: 136px;
+        filter: invert(100%);
+    }
+    
+    .left div {
+        line-height: 19px;
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    .mid {
+        display: block;
+        width: 36%;
+        margin: 29px auto;
+        /* border: 2px solid green; */
+    }
+    
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 43px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+    
+    .navbar {
+        display: inline-block;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+    
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+    
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+    }
+    
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: rgb(31, 30, 30);
+    }
+    
+    .container {
+        border: 2px solid white;
+        margin: 106px 80px;
+        padding: 75px;
+        width: 33%;
+        border-radius: 28px;
+    }
+    
+    .form-group input {
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    
+    .container h1 {
+        text-align: center;
+    }
+    
+    .container button {
+        display: block;
+        width: 74%;
+        margin: 20px auto;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="data:image/png;base64,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"
+                alt="">
+            <div>Anushtha Fitness</div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Delhi now</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
